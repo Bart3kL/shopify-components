@@ -7,9 +7,9 @@ import { readFilesRecursive } from "@/src/lib/readFilesRecursive";
 export default async function ComponentPage({
   params,
 }: {
-  params: { componentId: string };
+  params: Promise<{ componentId: string }>;
 }) {
-  const { componentId } = params;
+  const { componentId } = await params;
 
   const filesRaw = await readFilesRecursive(
     path.join(process.cwd(), "src/library", capitalize(componentId))
