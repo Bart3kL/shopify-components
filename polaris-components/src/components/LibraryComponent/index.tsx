@@ -6,7 +6,7 @@ import CodeTabs from "@/src/components/CodeTabs";
 
 import { COMPONENTS } from "./components";
 import { DEMO_PROPS } from "./placeholders";
-import { sortComponentFiles } from "@/src/utils/sortComponentFiles";
+import { sortComponentFiles } from "@/src/lib/sortComponentFiles";
 
 export function LibraryComponent({
   componentId,

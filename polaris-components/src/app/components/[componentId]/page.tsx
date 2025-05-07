@@ -2,7 +2,7 @@ import path from "path";
 
 import { LibraryComponent } from "@/src/components/LibraryComponent";
 
-import { readFilesRecursive } from "@/src/utils/readFilesRecursive";
+import { readFilesRecursive } from "@/src/lib/readFilesRecursive";
 
 export default async function ComponentPage({
   params,
