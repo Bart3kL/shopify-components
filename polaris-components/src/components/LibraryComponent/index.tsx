@@ -30,7 +30,8 @@ export function LibraryComponent({
         {COMPONENTS[LowerId as keyof typeof COMPONENTS].componentTitle}
       </Text>
       <div className="my-8" />
-      <DemoComponent {...demoProps} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <DemoComponent {...(demoProps as any)} />
       <hr className="my-8" />
 
       <CodeTabs files={files} componentId={componentId} />
