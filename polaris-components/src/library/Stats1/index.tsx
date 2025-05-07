@@ -11,7 +11,7 @@ import {
 } from "@shopify/polaris";
 import type { Metric, Stats1Props } from "./types";
 
-export default function Stats1({
+export function Stats1({
   title,
   metrics,
   footerText,

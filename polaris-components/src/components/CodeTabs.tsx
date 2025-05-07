@@ -58,7 +58,7 @@ export default function CodeTabs({
 
   return (
     <div className="border rounded-xl shadow-sm bg-white mt-8 font-mono">
-      <div className="flex items-center border-b px-2 py-1 gap-2 bg-[#F7F7F7] rounded-t-xl">
+      <div className="flex items-center border-b px-2 py-1 gap-2 bg-[#F7F7F7] rounded-t-xl overflow-auto">
         <div className="flex gap-1">
           {files.map((file, idx) => (
             <button
