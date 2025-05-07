@@ -14,10 +14,14 @@ export default async function ComponentPage({
   const filesRaw = await readFilesRecursive(
     path.join(process.cwd(), "src/library", capitalizeWords(componentId))
   );
-
+  console.log(capitalizeWords(componentId));
   return <LibraryComponent componentId={componentId} filesRaw={filesRaw} />;
 }
 
 function capitalizeWords(str: string) {
+  // Remove hyphen and uppercase the following letter
+  str = str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+
+  // Capitalize first letter of the string and each letter following a space
   return str.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
 }

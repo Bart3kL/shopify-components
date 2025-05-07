@@ -6,7 +6,7 @@ export const COMPONENTS = {
     componentTitle: "Stats #1",
     component: Stats1,
   },
-  cardlist: {
+  "card-list": {
     componentTitle: "Card List",
     component: CardList,
   },

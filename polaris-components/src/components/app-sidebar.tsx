@@ -44,7 +44,7 @@ const data = {
         },
         {
           title: "Card List",
-          url: "/components/cardlist",
+          url: "/components/card-list",
         },
       ],
     },

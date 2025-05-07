@@ -12,7 +12,7 @@ export const DEMO_PROPS = {
     footerLinkUrl:
       "https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-email/shopify-email-cost",
   },
-  cardlist: {
+  "card-list": {
     cardTitle: "Popular free themes",
     cardDesc:
       "Made with core features you can easily customize—no coding needed.",
