@@ -12,12 +12,12 @@ export default async function ComponentPage({
   const { componentId } = await params;
 
   const filesRaw = await readFilesRecursive(
-    path.join(process.cwd(), "src/library", capitalize(componentId))
+    path.join(process.cwd(), "src/library", capitalizeWords(componentId))
   );
 
   return <LibraryComponent componentId={componentId} filesRaw={filesRaw} />;
 }
 
-function capitalize(str: string) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+function capitalizeWords(str: string) {
+  return str.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
 }
