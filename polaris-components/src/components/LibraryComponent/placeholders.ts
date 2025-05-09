@@ -1,3 +1,5 @@
+import content from "./content.json";
+
 export const DEMO_PROPS = {
   stats1: {
     title: "Monthly email usage",
@@ -52,5 +54,8 @@ export const DEMO_PROPS = {
         url: "https://themes.shopify.com/themes/refresh",
       },
     ],
+  },
+  "rich-text-editor": {
+    content,
   },
 };

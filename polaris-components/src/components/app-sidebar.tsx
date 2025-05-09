@@ -1,4 +1,5 @@
 import * as React from "react";
+import { usePathname } from "next/navigation";
 
 import { SearchForm } from "@/src/components/search-form";
 import { VersionSwitcher } from "@/src/components/version-switcher";
@@ -17,42 +18,52 @@ import {
 import Link from "next/link";
 
 // This is sample data.
-const data = {
-  versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
-  navMain: [
-    {
-      title: "Getting Started",
-      url: "#",
-      items: [
-        {
-          title: "Installation",
-          url: "#",
-        },
-        {
-          title: "Project Structure",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Components",
-      url: "#",
-      items: [
-        {
-          title: "Stats  #1",
-          url: "/components/stats1",
-          isActive: true,
-        },
-        {
-          title: "Card List",
-          url: "/components/card-list",
-        },
-      ],
-    },
-  ],
-};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathname = usePathname();
+
+  const data = {
+    versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
+    navMain: [
+      {
+        title: "Getting Started",
+        url: "#",
+        items: [
+          {
+            title: "Installation",
+            url: "#",
+            isActive: pathname === "/installation",
+          },
+          {
+            title: "Project Structure",
+            url: "#",
+            isActive: pathname === "/project-structure",
+          },
+        ],
+      },
+      {
+        title: "Components",
+        url: "#",
+        items: [
+          {
+            title: "Stats  #1",
+            url: "/components/stats1",
+            isActive: pathname === "/components/stats1",
+          },
+          {
+            title: "Card List",
+            url: "/components/card-list",
+            isActive: pathname === "/components/card-list",
+          },
+          {
+            title: "Rich Text Editor",
+            url: "/components/rich-text-editor",
+            isActive: pathname === "/components/rich-text-editor",
+          },
+        ],
+      },
+    ],
+  };
   return (
     <Sidebar {...props}>
       <SidebarHeader>

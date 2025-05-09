@@ -14,7 +14,7 @@ export default async function ComponentPage({
   const filesRaw = await readFilesRecursive(
     path.join(process.cwd(), "src/library", capitalizeWords(componentId))
   );
-  console.log(capitalizeWords(componentId));
+
   return <LibraryComponent componentId={componentId} filesRaw={filesRaw} />;
 }
 

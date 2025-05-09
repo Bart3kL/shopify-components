@@ -64,7 +64,7 @@ export default function CodeTabs({
             <button
               key={file.filename}
               onClick={() => setActive(idx)}
-              className={`px-3 py-1 rounded-t text-xs font-mono  cursor-pointer ${
+              className={`px-3 py-1 rounded-t text-xs font-mono  cursor-pointer min-w-fit ${
                 idx === active
                   ? "  text-blue-600 font-bold "
                   : "border-transparent bg-transparent text-neutral-600 hover:bg-neutral-100"

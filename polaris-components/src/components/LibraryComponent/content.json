@@ -1,0 +1,232 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "textAlign": null,
+        "level": 1
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Shopify UI Component Library"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": null
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Welcome to the component library for "
+        },
+        {
+          "type": "text",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ],
+          "text": "Shopify"
+        },
+        {
+          "type": "text",
+          "text": "! This section includes reusable UI elements designed for dynamic sections, blocks, and page templates."
+        }
+      ]
+    },
+    {
+      "type": "codeBlock",
+      "attrs": {
+        "language": "liquid"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{{ section.settings.rich_content | rich_text }}"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "textAlign": null,
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Included Components"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Rich text blocks with advanced formatting"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Image components"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Reusable buttons, accordions, and tabs"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": null
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Each component follows Shopify’s design guidelines and is optimized for performance and accessibility."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "textAlign": null,
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "How to use"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": null
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Simply copy the section into your theme and customize the content using the theme editor. No extra setup is required."
+        }
+      ]
+    },
+    {
+      "type": "taskList",
+      "content": [
+        {
+          "type": "taskItem",
+          "attrs": {
+            "checked": true
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Explore all components"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "taskItem",
+          "attrs": {
+            "checked": false
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Integrate into your theme"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": null
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://shopify.dev",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              }
+            }
+          ],
+          "text": "Learn more in the Shopify developer docs"
+        }
+      ]
+    }
+  ]
+}
