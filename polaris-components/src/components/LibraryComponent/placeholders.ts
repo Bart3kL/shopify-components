@@ -1,4 +1,5 @@
 import content from "./content.json";
+import { MarketsIcon, EmailIcon, CalculatorIcon } from "@shopify/polaris-icons";
 
 export const DEMO_PROPS = {
   stats1: {
@@ -138,5 +139,29 @@ export const DEMO_PROPS = {
         note: null,
       },
     ],
+  },
+  "shortcuts-section": {
+    shortcuts: [
+      {
+        href: "https://www.shopify.com",
+        icon: EmailIcon,
+        title: "E-mail and SMS marketing in checkout ",
+        subtitle: "Ask your customers for their marketing preferences",
+      },
+      {
+        href: "https://www.shopify.com",
+        icon: MarketsIcon,
+        title: "Shopify",
+        subtitle: "Your online store",
+      },
+      {
+        href: "https://www.shopify.com",
+        icon: CalculatorIcon,
+        title: "Double opt-in for marketing",
+        subtitle: "Ask your customers to confirm their contact details",
+      },
+    ],
+    title: "Marketing",
+    infoUrl: "https://www.shopify.com",
   },
 };
