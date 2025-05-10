@@ -27,7 +27,7 @@ export const Layout = ({
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>
-          <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+          <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4 ">
             <SidebarTrigger className="-ml-1" />
             <Separator
               orientation="vertical"
@@ -47,7 +47,9 @@ export const Layout = ({
               </BreadcrumbList>
             </Breadcrumb>
           </header>
-          <div className="flex flex-1 flex-col gap-4 p-4 ali">{children}</div>
+          <div className="flex flex-1 flex-col gap-4 p-4 ali bg-[#f1f1f1]">
+            {children}
+          </div>
         </SidebarInset>
       </SidebarProvider>
     </AppProvider>

@@ -58,4 +58,85 @@ export const DEMO_PROPS = {
   "rich-text-editor": {
     content,
   },
+  "search-engine-listing": {
+    shopName: "XX xx xx",
+    url: "https://xxx.myshopify.com › products › soap-dish",
+    title: "AUTOGRAF Soap Dish",
+    metaTitle: "AUTOGRAF Soap Dish",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy te",
+    handle: "soap-dish",
+    urlPrefix: "products/",
+    price: "$27.00 USD",
+  },
+  "pricing-plans": {
+    plans: [
+      {
+        name: "Basic",
+        badge: null,
+
+        description: "For small teams and startups",
+        priceLabel: "$25 USD",
+        buttonLabel: "Not available for Shopify Plus",
+        buttonDisabled: true,
+        buttonLink: "",
+        features: [
+          {
+            label: "Pickup point selection after checkout",
+            info: "Customers select the pickup point after payment, on the Thank you page",
+          },
+          { label: "35 countries" },
+          { label: "40+ carriers" },
+          { label: "24 languages" },
+          { label: "Email support" },
+          { label: "Express checkout support" },
+          { label: "Easy integration with third parties" },
+          { label: "Change pickup point in Shopify Admin" },
+          { label: "Select pickup point in Shopify POS" },
+          {
+            label: "Automate with Shopify Flow",
+            info: "Create custom flows such as tagging orders with pickup point delivery",
+          },
+          { label: "GDPR compliant" },
+        ],
+        note: null,
+      },
+      {
+        name: "Premium",
+        badge: "14 days trial",
+
+        description: "For growing companies",
+        priceLabel: "$49 USD",
+        buttonLabel: "Select plan",
+        buttonDisabled: false,
+        buttonLink: "",
+        features: [
+          { label: "Everything in Basic, plus" },
+          { label: "Pickup point selection in checkout" },
+          { label: "Chat support" },
+          { label: "Custom endpoint" },
+        ],
+        note: null,
+      },
+      {
+        name: "Enterprise",
+        badge: null,
+
+        description: "For enterprise-grade needs",
+        priceLabel: "$350 USD",
+        buttonLabel: "Select plan",
+        buttonDisabled: false,
+        buttonLink: "mailto:support@example.com",
+        features: [
+          { label: "Everything in Premium, plus" },
+          { label: "99.99% uptime SLA" },
+          { label: "Advanced support" },
+          { label: "Security and legal review" },
+          { label: "Customizations" },
+          { label: "Custom integrations" },
+        ],
+        note: null,
+      },
+    ],
+  },
 };

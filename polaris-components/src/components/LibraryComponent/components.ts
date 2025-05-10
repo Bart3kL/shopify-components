@@ -1,5 +1,7 @@
 import { CardList } from "@/src/library/CardList";
+import { PricingPlans } from "@/src/library/PricingPlans";
 import { RichTextEditor } from "@/src/library/RichTextEditor";
+import { SearchEngineListing } from "@/src/library/SearchEngineListing";
 import { Stats1 } from "@/src/library/Stats1";
 
 export const COMPONENTS = {
@@ -14,5 +16,13 @@ export const COMPONENTS = {
   "rich-text-editor": {
     componentTitle: "RichTextEditor",
     component: RichTextEditor,
+  },
+  "search-engine-listing": {
+    componentTitle: "Search Engine Listing",
+    component: SearchEngineListing,
+  },
+  "pricing-plans": {
+    componentTitle: "Pricing Plans",
+    component: PricingPlans,
   },
 };

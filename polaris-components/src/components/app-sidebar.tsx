@@ -60,6 +60,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             url: "/components/rich-text-editor",
             isActive: pathname === "/components/rich-text-editor",
           },
+          {
+            title: "Search Engine Listing",
+            url: "/components/search-engine-listing",
+            isActive: pathname === "/components/search-engine-listing",
+          },
+          {
+            title: "Pricing Plans",
+            url: "/components/pricing-plans",
+            isActive: pathname === "/components/pricing-plans",
+          },
         ],
       },
     ],
