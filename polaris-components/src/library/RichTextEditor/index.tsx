@@ -65,7 +65,7 @@ import { handleImageUpload, MAX_FILE_SIZE } from "./lib/tiptap-utils";
 // --- Styles ---
 import "./simple-editor.scss";
 
-import { Text } from "@shopify/polaris";
+import { Card, Text } from "@shopify/polaris";
 
 const MainToolbarContent = ({
   onHighlighterClick,
@@ -208,7 +208,7 @@ export function RichTextEditor({ content }: { content: any }) {
   }, [isMobile, mobileView]);
 
   return (
-    <div>
+    <Card>
       <Text as="span" variant="bodyMd">
         Description
       </Text>
@@ -247,6 +247,6 @@ export function RichTextEditor({ content }: { content: any }) {
           </div>
         </EditorContext.Provider>
       </div>
-    </div>
+    </Card>
   );
 }

@@ -208,7 +208,7 @@ export const ListButton = React.forwardRef<HTMLButtonElement, ListButtonProps>(
       <Tooltip content={text}>
         <Button
           type="button"
-          className={`${className.trim()} cursor-pointer`}
+          className={`tiptap-button ${className}.trim() cursor-pointer w-[24px]! h-[24px]! max-w-[24px]! min-w-0! rounded-[.25rem]!`}
           data-style="ghost"
           data-active-state={isActive ? "on" : "off"}
           role="button"

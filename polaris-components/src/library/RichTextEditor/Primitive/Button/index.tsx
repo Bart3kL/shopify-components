@@ -110,7 +110,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         <Tooltip delay={200}>
           <TooltipTrigger
-            className={`tiptap-button ${className} cursor-pointer`.trim()}
+            className={`tiptap-button ${className} cursor-pointer w-[24px]! h-[24px]! max-w-[24px]! min-w-0! rounded-[.25rem]!`.trim()}
             ref={ref}
             aria-label={ariaLabel}
             {...props}

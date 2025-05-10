@@ -235,7 +235,7 @@ export const TextAlignButton = React.forwardRef<
     return (
       <Button
         type="button"
-        className={className.trim()}
+        className={`tiptap-button ${className}.trim() cursor-pointer w-[24px]! h-[24px]! max-w-[24px]! min-w-0! rounded-[.25rem]!`}
         disabled={isDisabled}
         data-style="ghost"
         data-active-state={isActive ? "on" : "off"}
