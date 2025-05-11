@@ -164,4 +164,143 @@ export const DEMO_PROPS = {
     title: "Marketing",
     infoUrl: "https://www.shopify.com",
   },
+  "setup-guide": {
+    completedTasks: 2,
+    totalTasks: 7,
+    header: "Setup guide",
+    description:
+      "Use this personalized guide to get your store up and running.",
+    onDismiss: () => alert("dismissed!"),
+
+    tasks: [
+      {
+        id: "add_product",
+        label: "Add your first product",
+        complete: true,
+        description:
+          "Write a description, add photos, and set pricing for the products you plan to sell.",
+        learnMoreUrl:
+          "https://help.shopify.com/en/manual/products/add-update-products",
+        actions: [
+          {
+            label: "Add product",
+            primary: true,
+            onClick: () => alert("Add product clicked"),
+          },
+          {
+            label: "Import products",
+            onClick: () => alert("Import clicked"),
+          },
+        ],
+        imageUrl:
+          "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/t8hbyt59p6p6pkzyqtwbtgavxx7h.svgz",
+      },
+      {
+        id: "customize_theme",
+        label: "Customize your online store",
+        complete: false,
+        description:
+          "Choose a theme and add your logo, colors, and images to reflect your brand.",
+        learnMoreUrl:
+          "https://help.shopify.com/manual/online-store/themes/customizing-themes",
+        actions: [
+          {
+            label: "Customize theme",
+            primary: true,
+            onClick: () => alert("Customize theme"),
+          },
+        ],
+        imageUrl:
+          "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/t8hbyt59p6p6pkzyqtwbtgavxx7h.svgz",
+      },
+      {
+        id: "customize_domain",
+        label: "Customize your domain",
+        complete: false,
+        description:
+          "Set up your store’s domain to make it easy for customers to find you.",
+        learnMoreUrl: "https://help.shopify.com/manual/domains/add-a-domain",
+        actions: [
+          {
+            label: "Add domain",
+            primary: true,
+            onClick: () => alert("Add domain"),
+          },
+        ],
+        imageUrl:
+          "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/9gnwpzees69n0q6498x38zx1u.svgz",
+      },
+      {
+        id: "review_shipping",
+        label: "Review your shipping rates",
+        complete: false,
+        description:
+          "Set up your shipping rates so you can start selling to customers.",
+        learnMoreUrl:
+          "https://help.shopify.com/manual/shipping/setting-up-and-managing-your-shipping",
+        actions: [
+          {
+            label: "Set shipping",
+            primary: true,
+            onClick: () => alert("Set shipping"),
+          },
+        ],
+        imageUrl:
+          "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/zy0owqndmo2zb1va8cwwu6kub.svgz",
+      },
+      {
+        id: "shopify_payments",
+        label: "Set up Shopify Payments",
+        complete: false,
+        description:
+          "Activate Shopify Payments to accept credit card payments instantly.",
+        learnMoreUrl:
+          "https://help.shopify.com/manual/payments/shopify-payments",
+        actions: [
+          {
+            label: "Set up payments",
+            primary: true,
+            onClick: () => alert("Set up payments"),
+          },
+        ],
+        imageUrl:
+          "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/rjexx5ytjim70bne52wv8t3eha.svgz",
+      },
+      {
+        id: "pick_plan",
+        label: "Pick a plan",
+        complete: true,
+        description:
+          "Choose a Shopify plan with the right features for your new business.",
+        learnMoreUrl:
+          "https://help.shopify.com/manual/your-account/pricing-plans",
+        actions: [
+          {
+            label: "Pick a plan",
+            primary: true,
+            onClick: () => alert("Pick a plan"),
+          },
+        ],
+        imageUrl:
+          "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/q6n53zls1e0q7k0ig31hh844z.png",
+      },
+      {
+        id: "place_test_order",
+        label: "Place a test order",
+        complete: false,
+        description:
+          "Create a test order to make sure your checkout is working.",
+        learnMoreUrl: "https://help.shopify.com/manual/orders/create-orders",
+        actions: [
+          {
+            label: "Create test order",
+            primary: true,
+            onClick: () => alert("Create test order"),
+          },
+        ],
+        imageUrl:
+          "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/x1uxrnbfpqqjznj6czv7peij79.svgz",
+      },
+    ],
+  },
 };

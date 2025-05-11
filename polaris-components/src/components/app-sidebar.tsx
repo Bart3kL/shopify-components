@@ -75,6 +75,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             url: "/components/shortcuts-section",
             isActive: pathname === "/components/shortcuts-section",
           },
+          {
+            title: "Setup Guide",
+            url: "/components/setup-guide",
+            isActive: pathname === "/components/setup-guide",
+          },
         ],
       },
     ],

@@ -2,6 +2,7 @@ import { CardList } from "@/src/library/CardList";
 import { PricingPlans } from "@/src/library/PricingPlans";
 import { RichTextEditor } from "@/src/library/RichTextEditor";
 import { SearchEngineListing } from "@/src/library/SearchEngineListing";
+import { SetupGuideAccordion } from "@/src/library/SetupGuide";
 import { ShortcutsSection } from "@/src/library/ShortcutsSection";
 import { Stats1 } from "@/src/library/Stats1";
 
@@ -29,5 +30,9 @@ export const COMPONENTS = {
   "shortcuts-section": {
     componentTitle: "Shortcuts Section",
     component: ShortcutsSection,
+  },
+  "setup-guide": {
+    componentTitle: "Setup Guide",
+    component: SetupGuideAccordion,
   },
 };
