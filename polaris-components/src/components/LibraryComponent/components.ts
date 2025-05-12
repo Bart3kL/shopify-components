@@ -5,6 +5,7 @@ import { RichTextEditor } from "@/src/library/RichTextEditor";
 import { SearchEngineListing } from "@/src/library/SearchEngineListing";
 import { SetupGuideAccordion } from "@/src/library/SetupGuide";
 import { ShortcutsSection } from "@/src/library/ShortcutsSection";
+import { Slider } from "@/src/library/Slider";
 import { Stats1 } from "@/src/library/Stats1";
 
 export const COMPONENTS = {
@@ -39,5 +40,9 @@ export const COMPONENTS = {
   "card-list2": {
     componentTitle: "Card List #2",
     component: CardList2,
+  },
+  slider: {
+    componentTitle: "Slider",
+    component: Slider,
   },
 };

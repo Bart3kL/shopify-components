@@ -359,4 +359,37 @@ export const DEMO_PROPS = {
       },
     ],
   },
+  slider: {
+    slides: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/0929/0367/0091/files/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1744464413",
+        heading: "Page analytics",
+        description:
+          "We use Google Analytics 4 (GA4) API to collect data and enhance general user experience.",
+        subheading: "We'll track the 6 essential metrics of an online store:",
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/0929/0367/0091/files/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg?v=1744464413",
+        heading: "Visitors 1",
+        description: "The total number of unique visitors to a page.",
+        subheading: "Insight you get from tracking this parameter:",
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/0929/0367/0091/files/Main_52f8e304-92d9-4a36-82af-50df8fe31c69.jpg?v=1744464413",
+        heading: "Visitors 2",
+        description: "The total number of unique visitors to a page.",
+        subheading: "Insight you get from tracking this parameter:",
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/0929/0367/0091/files/snowboard_purple_hydrogen.png?v=1744464414",
+        heading: "Visitors 3",
+        description: "The total number of unique visitors to a page.",
+        subheading: "Insight you get from tracking this parameter:",
+      },
+    ],
+  },
 };
