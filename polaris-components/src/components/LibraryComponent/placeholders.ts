@@ -1,5 +1,13 @@
 import content from "./content.json";
-import { MarketsIcon, EmailIcon, CalculatorIcon } from "@shopify/polaris-icons";
+import {
+  MarketsIcon,
+  EmailIcon,
+  CalculatorIcon,
+  ChatIcon,
+  BookOpenIcon,
+  PlayCircleIcon,
+  PersonIcon,
+} from "@shopify/polaris-icons";
 
 export const DEMO_PROPS = {
   stats1: {
@@ -300,6 +308,54 @@ export const DEMO_PROPS = {
         ],
         imageUrl:
           "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/x1uxrnbfpqqjznj6czv7peij79.svgz",
+      },
+    ],
+  },
+  "card-list2": {
+    title: "Support channels",
+    items: [
+      {
+        id: "live-chat",
+        icon: ChatIcon,
+        heading: "Live chat",
+        description: "24/7 live chat support, instant replies.",
+        action: {
+          label: "Open chat",
+          onClick: () => alert("Open chat!"),
+        },
+      },
+      {
+        id: "help-center",
+        icon: BookOpenIcon,
+        heading: "Help center",
+        description: "Find answers in our detailed manuals.",
+        action: {
+          label: "Visit help center",
+          url: "https://www.shopify.com/pl",
+          external: true,
+        },
+      },
+      {
+        id: "video-tutorial",
+        icon: PlayCircleIcon,
+        heading: "Video tutorial",
+        description: "Have fun learning with concise video tutorials.",
+        action: {
+          label: "Watch tutorial",
+          url: "https://www.shopify.com/pl",
+          external: true,
+        },
+      },
+      {
+        id: "community",
+        icon: PersonIcon,
+        heading: "PageFly community",
+        description: "Get the latest updates, deals, tips, and more.",
+        action: {
+          label: "Join community",
+          url: "https://www.shopify.com/pl",
+          external: true,
+        },
       },
     ],
   },

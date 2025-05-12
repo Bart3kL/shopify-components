@@ -1,4 +1,5 @@
 import { CardList } from "@/src/library/CardList";
+import { CardList2 } from "@/src/library/CardList2";
 import { PricingPlans } from "@/src/library/PricingPlans";
 import { RichTextEditor } from "@/src/library/RichTextEditor";
 import { SearchEngineListing } from "@/src/library/SearchEngineListing";
@@ -34,5 +35,9 @@ export const COMPONENTS = {
   "setup-guide": {
     componentTitle: "Setup Guide",
     component: SetupGuideAccordion,
+  },
+  "card-list2": {
+    componentTitle: "Card List #2",
+    component: CardList2,
   },
 };

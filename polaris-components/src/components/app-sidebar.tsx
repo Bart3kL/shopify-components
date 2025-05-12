@@ -56,6 +56,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             isActive: pathname === "/components/card-list",
           },
           {
+            title: "Card List #2",
+            url: "/components/card-list2",
+            isActive: pathname === "/components/card-list2",
+          },
+          {
             title: "Rich Text Editor",
             url: "/components/rich-text-editor",
             isActive: pathname === "/components/rich-text-editor",
