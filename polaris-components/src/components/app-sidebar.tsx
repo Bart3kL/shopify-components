@@ -1,99 +1,41 @@
 import * as React from "react";
 import { usePathname } from "next/navigation";
-
-import { SearchForm } from "@/src/components/search-form";
-import { VersionSwitcher } from "@/src/components/version-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
   SidebarRail,
-} from "@/src/components/ui/sidebar";
+} from "./ui/sidebar";
+import { VersionSwitcher } from "./version-switcher";
+import { SearchForm } from "./search-form";
+import { data } from "../lib/constants";
 import Link from "next/link";
-
-// This is sample data.
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname();
+  const [searchValue, setSearchValue] = React.useState("");
 
-  const data = {
-    versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
-    navMain: [
-      {
-        title: "Getting Started",
-        url: "#",
-        items: [
-          {
-            title: "Installation",
-            url: "#",
-            isActive: pathname === "/installation",
-          },
-          {
-            title: "Project Structure",
-            url: "#",
-            isActive: pathname === "/project-structure",
-          },
-        ],
-      },
-      {
-        title: "Components",
-        url: "#",
-        items: [
-          {
-            title: "Stats  #1",
-            url: "/components/stats1",
-            isActive: pathname === "/components/stats1",
-          },
-          {
-            title: "Card List",
-            url: "/components/card-list",
-            isActive: pathname === "/components/card-list",
-          },
-          {
-            title: "Card List #2",
-            url: "/components/card-list2",
-            isActive: pathname === "/components/card-list2",
-          },
-          {
-            title: "Rich Text Editor",
-            url: "/components/rich-text-editor",
-            isActive: pathname === "/components/rich-text-editor",
-          },
-          {
-            title: "Search Engine Listing",
-            url: "/components/search-engine-listing",
-            isActive: pathname === "/components/search-engine-listing",
-          },
-          {
-            title: "Pricing Plans",
-            url: "/components/pricing-plans",
-            isActive: pathname === "/components/pricing-plans",
-          },
-          {
-            title: "Shortcuts Section",
-            url: "/components/shortcuts-section",
-            isActive: pathname === "/components/shortcuts-section",
-          },
-          {
-            title: "Setup Guide",
-            url: "/components/setup-guide",
-            isActive: pathname === "/components/setup-guide",
-          },
-          {
-            title: "Slider",
-            url: "/components/slider",
-            isActive: pathname === "/components/slider",
-          },
-        ],
-      },
-    ],
-  };
+  const componentsSection = data.navMain.find(
+    (section) => section.title.toLowerCase() === "components"
+  );
+  const gettingStartedSection = data.navMain.find(
+    (section) => section.title.toLowerCase() === "getting started"
+  );
+
+  const filteredComponentItems =
+    searchValue.trim().length > 0 && componentsSection
+      ? componentsSection.items.filter((item) =>
+          item.title.toLowerCase().includes(searchValue.toLowerCase())
+        )
+      : componentsSection?.items || [];
+
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -101,26 +43,68 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           versions={data.versions}
           defaultVersion={data.versions[0]}
         />
-        <SearchForm />
+
+        <SearchForm searchValue={searchValue} setSearchValue={setSearchValue} />
       </SidebarHeader>
       <SidebarContent>
-        {/* We create a SidebarGroup for each parent. */}
-        {data.navMain.map((item) => (
-          <SidebarGroup key={item.title}>
-            <SidebarGroupLabel>{item.title}</SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {item.items.map((item) => (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={item.isActive}>
-                      <Link href={item.url}>{item.title}</Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        ))}
+        <SidebarGroup>
+          <SidebarMenu>
+            {gettingStartedSection && searchValue.trim().length === 0 && (
+              <SidebarMenuItem key={gettingStartedSection.title}>
+                <SidebarMenuButton
+                  asChild
+                  isActive={gettingStartedSection.url === pathname}
+                >
+                  <p className="font-medium">{gettingStartedSection.title}</p>
+                </SidebarMenuButton>
+
+                {gettingStartedSection.items?.length ? (
+                  <SidebarMenuSub>
+                    {gettingStartedSection.items.map((item) => (
+                      <SidebarMenuSubItem key={item.title}>
+                        <SidebarMenuSubButton
+                          asChild
+                          isActive={item.pathname === pathname}
+                        >
+                          <Link href={item.url}>{item.title}</Link>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    ))}
+                  </SidebarMenuSub>
+                ) : null}
+              </SidebarMenuItem>
+            )}
+
+            {componentsSection && (
+              <SidebarMenuItem key={componentsSection.title}>
+                <SidebarMenuButton
+                  asChild
+                  isActive={componentsSection.url === pathname}
+                >
+                  <p className="font-medium">{componentsSection.title}</p>
+                </SidebarMenuButton>
+                {filteredComponentItems.length > 0 ? (
+                  <SidebarMenuSub>
+                    {filteredComponentItems.map((item) => (
+                      <SidebarMenuSubItem key={item.title}>
+                        <SidebarMenuSubButton
+                          asChild
+                          isActive={item.pathname === pathname}
+                        >
+                          <Link href={item.url}>{item.title}</Link>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    ))}
+                  </SidebarMenuSub>
+                ) : searchValue.trim() ? (
+                  <div className="px-4 py-2 text-xs text-muted-foreground">
+                    No components found.
+                  </div>
+                ) : null}
+              </SidebarMenuItem>
+            )}
+          </SidebarMenu>
+        </SidebarGroup>
       </SidebarContent>
       <SidebarRail />
     </Sidebar>

@@ -14,13 +14,14 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/src/components/ui/sidebar";
+import Link from "next/link";
 
 export function VersionSwitcher({
   versions,
   defaultVersion,
 }: {
-  versions: string[];
-  defaultVersion: string;
+  versions: { title: string; url: string }[];
+  defaultVersion: { title: string; url: string };
 }) {
   const [selectedVersion, setSelectedVersion] = React.useState(defaultVersion);
 
@@ -38,8 +39,8 @@ export function VersionSwitcher({
                 <GalleryVerticalEnd className="size-4" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
-                <span className="font-medium">Documentation</span>
-                <span className="">v{selectedVersion}</span>
+                {/* <span className="font-medium">FREE Components</span> */}
+                <span className="">{selectedVersion.title}</span>
               </div>
               <ChevronsUpDown className="ml-auto" />
             </SidebarMenuButton>
@@ -50,11 +51,17 @@ export function VersionSwitcher({
           >
             {versions.map((version) => (
               <DropdownMenuItem
-                key={version}
+                key={version.title}
                 onSelect={() => setSelectedVersion(version)}
               >
-                v{version}{" "}
-                {version === selectedVersion && <Check className="ml-auto" />}
+                <Link href={version.url} className="flex w-full items-center">
+                  <span className="ml-2">{version.title}</span>
+                  {selectedVersion.title === version.title && (
+                    <div className="ml-auto">
+                      <Check className="size-4" />
+                    </div>
+                  )}
+                </Link>
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
