@@ -1,3 +1,5 @@
+"use client";
+
 import { CardList } from "@/src/library/CardList";
 import { CardList2 } from "@/src/library/CardList2";
 import { PricingPlans } from "@/src/library/PricingPlans";
