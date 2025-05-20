@@ -35,7 +35,7 @@ export default function Introduction() {
                   panels, and onboarding flows-fast.
                 </Text>
                 <Text as="p" variant="bodyMd">
-                  {`Whether you're building with <strong>Remix</strong> or{" "}`}
+                  Whether you are building with <strong>Remix</strong> or{" "}
                   <strong>Next.js</strong>, our modular components are optimized
                   for seamless integration and match the native Shopify admin
                   experience. Built by developers for developers, this library
